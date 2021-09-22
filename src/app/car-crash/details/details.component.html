@@ -1,0 +1,18 @@
+<main class="fd-c">
+    <div class="col col-md-12">
+        <div class="screen">
+            <button style="margin-bottom: 10px;" (click)="back()" type="button" class="btn btn-primary">Back</button>
+            <div *ngIf="crashData" class="card">
+                <div class="card-header">
+                    Crash Details
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Car 1: {{crashData.vehicle_type_code1 ? crashData.vehicle_type_code1 : 'NA'}}</h5>
+                    <h5 class="card-title">Car 2: {{crashData.vehicle_type_code2 ? crashData.vehicle_type_code2 : 'NA'}}</h5>
+                    <p class="card-text">Date: {{crashData.crash_date ? (crashData.crash_date | toDate) : 'NA'}}</p>
+                    <p class="card-text">Time: {{crashData.crash_time ? crashData.crash_time : 'NA'}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
